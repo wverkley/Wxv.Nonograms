@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="SolutionParser.txt" />
+      <EmbeddedResource Include="PuzzleParser.txt" />
+      <EmbeddedResource Include="TurnParser.txt" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Wxv.Core\Wxv.Core.csproj" />
+      <ProjectReference Include="..\Wxv.Parser\Wxv.Parser.csproj" />
+    </ItemGroup>
+
+
+</Project>

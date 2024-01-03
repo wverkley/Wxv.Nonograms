@@ -1,0 +1,13 @@
+-whitespace := "\s+".
+
+header := whitespace? "\#Solution\s*\n".
+
+-description-suffix := "\#".
+description-value := "(.*?\n)".
+
+description := description-suffix description-value.
+
+cell := "[ @]".
+row := "\[" cell* "\]">.
+
+@root := header whitespace? (description whitespace?)* (row whitespace?)* @eof.

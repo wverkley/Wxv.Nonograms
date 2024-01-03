@@ -1,0 +1,51 @@
+﻿<Window 
+    x:Class="Wxv.Nonograms.UX.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Wxv.Nonograms.UX.Controls"
+    mc:Ignorable="d"
+    Title="Wxv.Nonograms" 
+    Height="700" 
+    Width="1000"
+    MinWidth="400"
+    MinHeight="200"
+    ResizeMode="CanResizeWithGrip"
+    Closing="MainWindow_OnClosing"
+    PreviewKeyDown="MainWindow_OnPreviewKeyDown" 
+    >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Menu VerticalAlignment="Top" Grid.Row="0">
+            <MenuItem Header="_File">
+                <MenuItem Header="E_xit" InputGestureText="Alt+F4" ToolTip="Exit the application" Click="ExitMenuItem_Click" />
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem x:Name="pasteMenuItem" Header="_Paste" InputGestureText="Ctrl+V" ToolTip="Paste a puzzle" Click="PasteMenuItem_Click" />
+                <MenuItem x:Name="clearMenuItem" Header="_Clear" InputGestureText="Del" ToolTip="Clear the board" Click="ClearMenuItem_Click" />
+                <Separator />
+                <MenuItem x:Name="undoMenuItem" Header="_Undo" InputGestureText="Ctrl+Z" ToolTip="Undo a change" Click="UndoMenuItem_OnClick" />
+                <MenuItem x:Name="redoMenuItem" Header="_Redo" InputGestureText="Ctrl+Y" ToolTip="Redo a change" Click="RedoMenuItem_OnClick" />
+                <Separator />
+                <MenuItem x:Name="checkMenuItem" Header="_Check" InputGestureText="Space" ToolTip="Check if correct" Click="CheckMenuItem_OnClick"/>
+                <MenuItem x:Name="hintMenuItem" Header="_Hint" InputGestureText="H" ToolTip="Give a hint" Click="HintMenuItem_OnClick" />
+            </MenuItem>
+        </Menu>
+
+        <controls:NonogramGrid 
+            Grid.Row="1" 
+            x:Name="nonogramGrid"
+            TurnChange="NonogramGrid_OnTurnChange"/> 
+
+        <StatusBar Name="statusBar" VerticalAlignment="Bottom" Grid.Row="2">
+            <StatusBarItem>
+                <TextBlock x:Name="statusTestBlock"> </TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Wxv.Core.String\Wxv.Core.String.csproj" />
+        <ProjectReference Include="..\Wxv.Core\Wxv.Core.csproj"/>
+        <ProjectReference Include="..\Wxv.Nonograms.Core\Wxv.Nonograms.Core.csproj"/>
+    </ItemGroup>
+</Project>

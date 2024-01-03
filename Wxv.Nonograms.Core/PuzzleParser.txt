@@ -1,0 +1,16 @@
+-whitespace := "\s+".
+
+header := whitespace? "\#Puzzle\s*\n".
+
+-description-suffix := "\#".
+description-value := "(.*?\n)".
+
+description := description-suffix description-value.
+
+length := whitespace? "[0-9]+">.
+lengths := whitespace? "\[" length* whitespace? "\]">.
+
+horizontal-lengths := whitespace? "H\:" whitespace? lengths+ whitespace?.
+vertical-lengths := whitespace? "V\:" whitespace? lengths+ whitespace?.
+
+@root := header whitespace? (description whitespace?)* horizontal-lengths vertical-lengths whitespace? @eof.

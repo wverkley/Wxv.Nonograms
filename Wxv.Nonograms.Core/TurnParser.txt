@@ -1,0 +1,28 @@
+-whitespace := "\s+".
+
+header := whitespace? "\#Turn\s*\n".
+
+flag := "[ X]".
+flagRow := "\[" flag* "\]">.
+
+cell := "[ @.]".
+cellRow := "\[" cell* "\]">.
+
+isFinishedFlag := "[NY]">.
+
+horizontalCompleted := whitespace? "H\:" whitespace? (flagRow whitespace?)*.
+verticalCompleted := whitespace? "V\:" whitespace? (flagRow whitespace?)*.
+cells := whitespace? "C\:" whitespace? (cellRow whitespace?)*.
+wrongCells := whitespace? "W\:" whitespace? (flagRow whitespace?)*.
+hintCells := whitespace? "I\:" whitespace? (flagRow whitespace?)*.
+isFinished := whitespace? "F\:" whitespace? isFinishedFlag.
+
+@root := 
+    header 
+    horizontalCompleted 
+    verticalCompleted 
+    cells 
+    wrongCells 
+    hintCells 
+    isFinished?
+    @eof.
