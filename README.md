@@ -28,7 +28,7 @@ I built this because I was a little frustrated with the limitations the otherwis
 - `Control+Y` redoes an operation
 - `Space` checks the picture for correctness or completeness.  Incorrect cells show as red.
 - The `H` key provides a hint.  Hints show as green.  Press space to _complete_ the hint.
-- Control+V will import a puzzle from one of the following sources:
+- `Control+V` will import a puzzle from one of the following sources:
   - A URL to a [www.nonograms.org](https://www.nonograms.org) black and white puzzle online e.g. https://www.nonograms.org/nonograms/i/1348
   - A URL to a [www.nonograms.org](https://www.nonograms.org) answer image online e.g. https://static.nonograms.org/files/nonograms/large/kotyonok3_12_1_1p.png
   - A solution image.  This must be a simple two color image.  This allows you to make and test your own nonogram puzzles and test them in this windows application.
