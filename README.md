@@ -4,7 +4,7 @@ _Version 1.0.0_
 
 Nonograms are picture logic puzzles which when solved reveal a hidden picture.  See also [Wikipedia](https://en.wikipedia.org/wiki/Nonogram).  This is a little windows application to play them.
 
-![Screenshot](Images/screenshot.png)
+![Screenshot](Images/Screenshot.png)
 
 I built this because I was a little frustrated with the limitations the otherwise excellent existing online web interfaces for this game.  It is heavily inspired by [www.nonograms.org](https://www.nonograms.org), but also has my own original contributions.  It's main extra features include:
 
