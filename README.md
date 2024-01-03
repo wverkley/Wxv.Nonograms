@@ -6,7 +6,7 @@ Nonograms are picture logic puzzles which when solved reveal a hidden picture.  
 
 ![Screenshot](Images/Screenshot.png)
 
-I built this because I was a little frustrated with the limitations the otherwise excellent existing online web interfaces for this game.  It is heavily inspired by [www.nonograms.org](https://www.nonograms.org), but also has my own original contributions.  It's main extra features include:
+I built this because I was a little frustrated with the limitations of the otherwise excellent existing online web interfaces for this game.  It is heavily inspired by [www.nonograms.org](https://www.nonograms.org), but also has my own original contributions.  It's main extra features include:
 
 - Lightweight UX, no web page or other extras to get in the way.
 - Provides the dimension of the cells your drawing.
@@ -39,10 +39,10 @@ I built this because I was a little frustrated with the limitations the otherwis
 - Prerequisites:
   - Windows 11 (10 should probably work too, as long as it supports .NET 7)
   - .NET 7 Desktop Runtime ( or later versions ), or any other .NET distribution that includes this e.g. the SDK.  https://dotnet.microsoft.com/en-us/download/dotnet/7.0
-    - This is most likely already installed on your Windows machine. 
-- Download the source and run the `Wxv.Nonograms.UX` project from the IDE or command line.  It needs .NET 7 and/or an IDE that supports it.
-- _or_ download the release [here](https://github.com/wverkley/Wxv.Nonograms/releases/tag/v1.0.0.0), unzip it somewhere, and run the `Wxv.Nonograms.UX.exe` application.  You will need the dotnet 8 or later runtime installed on your machine as well.
-- _Note: The application saves the puzzle you last worked on to the `~user\AppData\Local\Wxv.Nonograms.UX` folder.  Delete this folder manually if don't want it.  
+    - The is most likely already installed on your Windows computer. 
+- Download the source and run the `Wxv.Nonograms.UX` project from the IDE or command line.  It needs .NET 7 SDK and/or an IDE that supports it.
+- _or_ download the release [here](https://github.com/wverkley/Wxv.Nonograms/releases/tag/v1.0.0.0), unzip it somewhere, and run the `Wxv.Nonograms.UX.exe` application.  
+- _Note:_ The application saves the puzzle you last worked on to the `~user\AppData\Local\Wxv.Nonograms.UX` folder.  Delete this folder manually if don't want it.  
 
 ## Notes
 
